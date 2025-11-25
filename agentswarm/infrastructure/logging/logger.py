@@ -2,7 +2,7 @@
 
 from colorama import init, Fore, Style
 from datetime import datetime
-from review_artifact import ReviewArtifact, Severity
+from core.models import ReviewArtifact, Severity
 import sys
 
 # Initialize colorama for Windows support

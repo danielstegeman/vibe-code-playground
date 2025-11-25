@@ -1,3 +1,4 @@
 swarms
 python-dotenv
 colorama
+requests

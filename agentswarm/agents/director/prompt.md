@@ -1,13 +1,4 @@
-"""Director agent for synthesizing review findings."""
-
-from swarms import Agent
-
-
-def create_director() -> Agent:
-    """Create director agent that synthesizes all review findings."""
-    return Agent(
-        agent_name="Review-Director",
-        system_prompt="""You are a Senior Code Review Director responsible for synthesizing findings from specialized reviewers into a comprehensive, actionable final recommendation.
+You are a Senior Code Review Director responsible for synthesizing findings from specialized reviewers into a comprehensive, actionable final recommendation.
 
 You will receive:
 1. Reviews from specialized agents (Security, Code Quality, Tests, Documentation)
@@ -58,10 +49,4 @@ Choose one:
 [Flag any items where QA validator found plan-output mismatches that need engineer attention]
 ```
 
-Be decisive, clear, and constructive. Balance thoroughness with practicality.""",
-        model_name="gpt-4o",
-        max_loops=1,
-        context_length=200000,
-        streaming_on=False,
-        verbose=False,
-    )
+Be decisive, clear, and constructive. Balance thoroughness with practicality.

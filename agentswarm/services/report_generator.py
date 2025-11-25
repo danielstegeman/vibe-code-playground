@@ -1,7 +1,7 @@
 """Markdown report generator for PR reviews."""
 
 from datetime import datetime
-from review_artifact import ReviewArtifact, Severity
+from core.models import ReviewArtifact, Severity
 from pathlib import Path
 
 
@@ -11,7 +11,7 @@ def generate_markdown_report(
     artifacts: list[ReviewArtifact],
     qa_output: str,
     director_output: str,
-    output_dir: str = "reviews"
+    output_dir: str = "outputs/reports"
 ) -> str:
     """
     Generate a comprehensive markdown review report.
