@@ -1,7 +1,6 @@
 """Core utilities."""
 
 from pathlib import Path
-from config import MINIMAL_TOKEN_MODE
 
 
 # Minimal placeholder prompt for testing (conserves tokens)
@@ -19,6 +18,9 @@ def load_prompt_from_file(prompt_path: Path) -> str:
     Returns:
         The prompt text as a string (or minimal prompt if in minimal token mode)
     """
+    # Lazy import to avoid circular dependency
+    from config import MINIMAL_TOKEN_MODE
+    
     if MINIMAL_TOKEN_MODE:
         return MINIMAL_PROMPT
     return prompt_path.read_text(encoding='utf-8')
