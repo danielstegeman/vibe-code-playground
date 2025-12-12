@@ -24,5 +24,5 @@ def create_qa_validator(model_name: str = "gpt-4o") -> Agent:
         temperature=0.5,
         top_p=None,
         retry_attempts=3,
-        retry_interval=2,
+        retry_interval=200,
     )
