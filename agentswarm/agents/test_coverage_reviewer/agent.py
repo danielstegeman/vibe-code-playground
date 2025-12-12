@@ -12,15 +12,17 @@ def load_prompt() -> str:
 
 
 def create_test_coverage_reviewer(model_name: str = "gpt-4o") -> Agent:
-    """Create test coverage and quality reviewer agent."""
+    """Create test coverage reviewer agent."""
     return Agent(
         agent_name="Test-Coverage-Reviewer",
         system_prompt=load_prompt(),
         model_name=model_name,
         max_loops=2,
-        context_length=200000,
+        context_length=30000,
         streaming_on=False,
         verbose=False,
         temperature=0.7,
         top_p=None,
+        retry_attempts=3,
+        retry_interval=2,
     )

@@ -8,6 +8,7 @@ from .settings import (
     GITHUB_PR_NUMBER,
     GITHUB_TOKEN,
     OUTPUT_DIR,
+    PARALLEL_EXECUTION,
     validate_api_key,
     get_github_config
 )
@@ -20,6 +21,7 @@ __all__ = [
     'GITHUB_PR_NUMBER',
     'GITHUB_TOKEN',
     'OUTPUT_DIR',
+    'PARALLEL_EXECUTION',
     'validate_api_key',
     'get_github_config'
 ]

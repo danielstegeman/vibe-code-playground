@@ -14,6 +14,9 @@ load_dotenv()
 # Minimal token mode - replaces agent prompts with minimal placeholders to conserve tokens during testing
 MINIMAL_TOKEN_MODE = os.getenv("MINIMAL_TOKEN_MODE", "false").lower() in ("true", "1", "yes")
 
+# Parallel execution - run reviewers in parallel (faster) or sequentially (rate limit friendly)
+PARALLEL_EXECUTION = os.getenv("PARALLEL_EXECUTION", "false").lower() in ("true", "1", "yes")
+
 
 # ============================================================================
 # MODEL CONFIGURATION

@@ -12,15 +12,17 @@ def load_prompt() -> str:
 
 
 def create_qa_validator(model_name: str = "gpt-4o") -> Agent:
-    """Create QA validator agent that checks plan-output alignment."""
+    """Create QA validation agent."""
     return Agent(
         agent_name="QA-Validator",
         system_prompt=load_prompt(),
         model_name=model_name,
         max_loops=1,
-        context_length=200000,
+        context_length=30000,
         streaming_on=False,
         verbose=False,
-        temperature=0.7,
+        temperature=0.5,
         top_p=None,
+        retry_attempts=3,
+        retry_interval=2,
     )

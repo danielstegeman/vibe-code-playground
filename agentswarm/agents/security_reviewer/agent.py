@@ -18,9 +18,11 @@ def create_security_reviewer(model_name: str = "gpt-4o") -> Agent:
         system_prompt=load_prompt(),
         model_name=model_name,
         max_loops=2,
-        context_length=200000,
+        context_length=30000,
         streaming_on=False,
         verbose=False,
         temperature=0.7,
         top_p=None,
+        retry_attempts=3,
+        retry_interval=2,
     )

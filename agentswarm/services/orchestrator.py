@@ -1,12 +1,48 @@
 """Main orchestration service for PR review swarm."""
 
+import asyncio
 from datetime import datetime
 from typing import Optional
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from agents import create_all_reviewers, create_qa_validator, create_director, parse_qa_validation
 from core.models import ReviewArtifact
 from infrastructure.logging import ReviewLogger
+from config import PARALLEL_EXECUTION
 from .report_generator import generate_markdown_report
+
+
+def _execute_reviewer_parallel(reviewer, review_task: str, logger: ReviewLogger) -> ReviewArtifact:
+    """
+    Execute a single reviewer in parallel mode.
+    
+    Args:
+        reviewer: The reviewer agent to execute
+        review_task: The review task description
+        logger: Logger instance for progress tracking
+        
+    Returns:
+        ReviewArtifact containing the review results
+    """
+    agent_name = reviewer.agent_name
+    
+    # Phase 1: Planning
+    logger.log_agent_start(agent_name, "PLANNING")
+    plan_response = reviewer.run(review_task)
+    logger.log_agent_complete(agent_name, "PLANNING")
+    
+    # Phase 2: Execution
+    logger.log_agent_start(agent_name, "EXECUTION")
+    execution_response = reviewer.run("Now execute your review following the plan you created.")
+    logger.log_agent_complete(agent_name, "EXECUTION")
+    
+    # Create and return artifact
+    return ReviewArtifact(
+        agent_name=agent_name,
+        plan_text=str(plan_response),
+        output_text=str(execution_response),
+        timestamp=datetime.now()
+    )
 
 
 def run_pr_review(
@@ -45,6 +81,9 @@ def run_pr_review(
         
         # Step 2: Run reviewer agents (two-phase: plan + execute)
         logger.log_stage("REVIEWER EXECUTION")
+        execution_mode = "PARALLEL" if PARALLEL_EXECUTION else "SEQUENTIAL"
+        logger.log_progress(f"Execution mode: {execution_mode}")
+        
         artifacts = []
         
         # Build the review task
@@ -61,30 +100,56 @@ Execute your two-phase review:
 2. Then, execute the review following that plan exactly
 """
         
-        for reviewer in reviewers:
-            agent_name = reviewer.agent_name
+        if PARALLEL_EXECUTION:
+            # Parallel execution - run all reviewers concurrently
+            logger.log_progress(f"Starting {len(reviewers)} reviewers in parallel...")
             
-            # Phase 1: Planning
-            logger.log_agent_start(agent_name, "PLANNING")
-            plan_response = reviewer.run(review_task)
-            logger.log_agent_complete(agent_name, "PLANNING")
+            with ThreadPoolExecutor(max_workers=len(reviewers)) as executor:
+                # Submit all reviewers for parallel execution
+                future_to_reviewer = {
+                    executor.submit(_execute_reviewer_parallel, reviewer, review_task, logger): reviewer 
+                    for reviewer in reviewers
+                }
+                
+                # Collect results as they complete
+                for future in as_completed(future_to_reviewer):
+                    try:
+                        artifact = future.result()
+                        artifacts.append(artifact)
+                    except Exception as e:
+                        reviewer = future_to_reviewer[future]
+                        logger.log_error(f"Reviewer {reviewer.agent_name} failed", e)
+                        raise
             
-            # Phase 2: Execution (agent will auto-loop due to max_loops=2)
-            # The plan is already in conversation history
-            logger.log_agent_start(agent_name, "EXECUTION")
-            execution_response = reviewer.run("Now execute your review following the plan you created.")
-            logger.log_agent_complete(agent_name, "EXECUTION")
+            logger.log_progress(f"Completed {len(artifacts)} parallel reviews")
+        else:
+            # Sequential execution - run reviewers one by one (better for rate limits)
+            logger.log_progress(f"Starting {len(reviewers)} reviewers sequentially...")
             
-            # Create artifact
-            artifact = ReviewArtifact(
-                agent_name=agent_name,
-                plan_text=str(plan_response),
-                output_text=str(execution_response),
-                timestamp=datetime.now()
-            )
-            artifacts.append(artifact)
-        
-        logger.log_progress(f"Completed {len(reviewers)} agent reviews")
+            for reviewer in reviewers:
+                agent_name = reviewer.agent_name
+                
+                # Phase 1: Planning
+                logger.log_agent_start(agent_name, "PLANNING")
+                plan_response = reviewer.run(review_task)
+                logger.log_agent_complete(agent_name, "PLANNING")
+                
+                # Phase 2: Execution (agent will auto-loop due to max_loops=2)
+                # The plan is already in conversation history
+                logger.log_agent_start(agent_name, "EXECUTION")
+                execution_response = reviewer.run("Now execute your review following the plan you created.")
+                logger.log_agent_complete(agent_name, "EXECUTION")
+                
+                # Create artifact
+                artifact = ReviewArtifact(
+                    agent_name=agent_name,
+                    plan_text=str(plan_response),
+                    output_text=str(execution_response),
+                    timestamp=datetime.now()
+                )
+                artifacts.append(artifact)
+            
+            logger.log_progress(f"Completed {len(reviewers)} sequential reviews")
         
         # Step 3: QA Validation
         logger.log_validation_start()

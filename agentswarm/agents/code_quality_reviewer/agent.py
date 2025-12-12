@@ -12,15 +12,17 @@ def load_prompt() -> str:
 
 
 def create_code_quality_reviewer(model_name: str = "gpt-4o") -> Agent:
-    """Create code quality and architecture reviewer agent."""
+    """Create code quality reviewer agent."""
     return Agent(
         agent_name="Code-Quality-Reviewer",
         system_prompt=load_prompt(),
         model_name=model_name,
         max_loops=2,
-        context_length=200000,
+        context_length=30000,
         streaming_on=False,
         verbose=False,
         temperature=0.7,
         top_p=None,
+        retry_attempts=3,
+        retry_interval=2,
     )
