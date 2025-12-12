@@ -18,12 +18,11 @@ def create_director(model_name: str = "gpt-4o") -> Agent:
         system_prompt=load_prompt(),
         model_name=model_name,
         max_loops=1,
-        context_length=30000,
-    
+        dynamic_context_window=True,
         streaming_on=False,
         verbose=False,
         temperature=0.7,
         top_p=None,
         retry_attempts=3,
-        retry_interval=200,
+        retry_interval=300,
     )
