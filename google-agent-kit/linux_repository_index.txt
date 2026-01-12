@@ -1,0 +1,140 @@
+================================================================================
+REPOSITORY INDEX REPORT
+================================================================================
+Repository: linux
+URL: https://github.com/torvalds/linux
+Indexed at: 2026-01-12T21:30:12.220209
+
+--------------------------------------------------------------------------------
+SUMMARY STATISTICS
+--------------------------------------------------------------------------------
+Total Files: 92,181
+Total Directories: 6,098
+Total Size: 1.48 GB
+Maximum Depth: 10
+
+--------------------------------------------------------------------------------
+FILE TYPE DISTRIBUTION
+--------------------------------------------------------------------------------
+.c                     36,324 files (39.41%)
+.h                     26,367 files (28.60%)
+(no extension)          7,308 files ( 7.93%)
+.yaml                   5,333 files ( 5.79%)
+.rst                    3,898 files ( 4.23%)
+.dts                    3,476 files ( 3.77%)
+.dtsi                   2,610 files ( 2.83%)
+.s                      1,358 files ( 1.47%)
+.txt                    1,036 files ( 1.12%)
+.sh                     1,034 files ( 1.12%)
+.json                     998 files ( 1.08%)
+.py                       346 files ( 0.38%)
+.rs                       338 files ( 0.37%)
+.dtso                     255 files ( 0.28%)
+.j2                       143 files ( 0.16%)
+.tc                       137 files ( 0.15%)
+.config                   101 files ( 0.11%)
+.pkt                       97 files ( 0.11%)
+.svg                       82 files ( 0.09%)
+.cocci                     75 files ( 0.08%)
+
+--------------------------------------------------------------------------------
+LARGEST FILES
+--------------------------------------------------------------------------------
+ 1.   23.05 MB - drivers\gpu\drm\amd\include\asic_reg\dcn\dcn_3_2_0_sh_mask.h
+ 2.   16.10 MB - drivers\gpu\drm\amd\include\asic_reg\nbio\nbio_7_7_0_sh_mask.h
+ 3.   15.80 MB - drivers\gpu\drm\amd\include\asic_reg\nbio\nbio_7_2_0_sh_mask.h
+ 4.   15.05 MB - drivers\gpu\drm\amd\include\asic_reg\dcn\dcn_4_1_0_sh_mask.h
+ 5.   13.84 MB - drivers\gpu\drm\amd\include\asic_reg\dpcs\dpcs_4_2_3_sh_mask.h
+ 6.   13.62 MB - drivers\gpu\drm\amd\include\asic_reg\nbio\nbio_6_1_sh_mask.h
+ 7.   12.36 MB - drivers\gpu\drm\amd\include\asic_reg\nbio\nbio_2_3_sh_mask.h
+ 8.   12.27 MB - drivers\gpu\drm\amd\include\asic_reg\nbio\nbio_7_0_sh_mask.h
+ 9.   10.97 MB - drivers\gpu\drm\amd\include\asic_reg\dpcs\dpcs_4_2_2_sh_mask.h
+10.   10.94 MB - drivers\gpu\drm\amd\include\asic_reg\dpcs\dpcs_4_2_0_sh_mask.h
+
+--------------------------------------------------------------------------------
+DIRECTORY STATISTICS (Top 20 by file count)
+--------------------------------------------------------------------------------
+
+include\linux
+  Files: 1,519 | Subdirs: 83 | Size: 11.74 MB
+  Top types: .h(1519)
+
+tools\testing\selftests\bpf\progs
+  Files: 933 | Subdirs: 0 | Size: 2.80 MB
+  Top types: .c(901), .h(32)
+
+sound\soc\codecs
+  Files: 710 | Subdirs: 1 | Size: 18.38 MB
+  Top types: .c(443), .h(265), (no extension)(2)
+
+arch\arm\boot\dts\nxp\imx
+  Files: 638 | Subdirs: 0 | Size: 4.21 MB
+  Top types: .dts(398), .dtsi(219), .h(19), .dtso(1), (no extension)(1)
+
+drivers\gpu\drm\amd\amdgpu
+  Files: 595 | Subdirs: 0 | Size: 11.56 MB
+  Top types: .h(302), .c(286), .asm(5), (no extension)(2)
+
+include\uapi\linux
+  Files: 580 | Subdirs: 30 | Size: 4.60 MB
+  Top types: .h(580)
+
+Documentation\ABI\testing
+  Files: 578 | Subdirs: 0 | Size: 1.75 MB
+  Top types: (no extension)(578)
+
+arch\arm64\boot\dts\qcom
+  Files: 525 | Subdirs: 0 | Size: 6.94 MB
+  Top types: .dts(302), .dtsi(209), .dtso(13), (no extension)(1)
+
+arch\arm64\boot\dts\freescale
+  Files: 516 | Subdirs: 0 | Size: 4.19 MB
+  Top types: .dts(216), .dtsi(215), .dtso(70), .h(14), (no extension)(1)
+
+include\dt-bindings\clock
+  Files: 511 | Subdirs: 0 | Size: 2.31 MB
+  Top types: .h(511)
+
+Documentation\devicetree\bindings\clock
+  Files: 442 | Subdirs: 3 | Size: 944.51 KB
+  Top types: .yaml(421), .txt(21)
+
+Documentation\devicetree\bindings\sound
+  Files: 436 | Subdirs: 0 | Size: 996.42 KB
+  Top types: .yaml(346), .txt(90)
+
+drivers\gpu\drm\xe
+  Files: 410 | Subdirs: 6 | Size: 3.07 MB
+  Top types: .h(249), .c(153), (no extension)(4), .rules(2), .debug(1)
+
+tools\testing\selftests\bpf\prog_tests
+  Files: 410 | Subdirs: 0 | Size: 3.05 MB
+  Top types: .c(403), .h(6), (no extension)(1)
+
+tools\perf\util
+  Files: 377 | Subdirs: 9 | Size: 3.86 MB
+  Top types: .c(190), .h(173), .l(4), .y(4), (no extension)(2)
+
+drivers\gpu\drm\i915\display
+  Files: 339 | Subdirs: 0 | Size: 5.89 MB
+  Top types: .h(195), .c(144)
+
+arch\x86\include\asm
+  Files: 331 | Subdirs: 10 | Size: 1.38 MB
+  Top types: .h(330), (no extension)(1)
+
+arch\arm64\boot\dts\rockchip
+  Files: 316 | Subdirs: 0 | Size: 3.22 MB
+  Top types: .dts(200), .dtsi(101), .dtso(13), (no extension)(1), .h(1)
+
+arch\powerpc\include\asm
+  Files: 312 | Subdirs: 3 | Size: 1.55 MB
+  Top types: .h(311), (no extension)(1)
+
+arch\arm\boot\dts\ti\omap
+  Files: 308 | Subdirs: 0 | Size: 2.35 MB
+  Top types: .dtsi(154), .dts(148), .dtso(5), (no extension)(1)
+
+================================================================================
+END OF REPORT
+================================================================================
