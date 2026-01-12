@@ -216,3 +216,4 @@ __marimo__/
 .streamlit/secrets.toml
 
 google-agent-kit\linux_kernel
+google-agent-kit\linux_repo
