@@ -1,0 +1,56 @@
+================================================================================
+REPOSITORY INDEX REPORT
+================================================================================
+Repository: linux
+URL: https://github.com/torvalds/linux
+Indexed at: 2026-01-12T22:52:44.919206
+
+--------------------------------------------------------------------------------
+SUMMARY STATISTICS
+--------------------------------------------------------------------------------
+Total Files: 92,181
+Total Directories: 6,098
+Total Lines of Code: 41,829,234
+Maximum Depth: 10
+
+--------------------------------------------------------------------------------
+FILE TYPE DISTRIBUTION
+--------------------------------------------------------------------------------
+.c                     36,324 files (39.41%)
+.h                     26,367 files (28.60%)
+(no extension)          7,308 files ( 7.93%)
+.yaml                   5,333 files ( 5.79%)
+.rst                    3,898 files ( 4.23%)
+.dts                    3,476 files ( 3.77%)
+.dtsi                   2,610 files ( 2.83%)
+.s                      1,358 files ( 1.47%)
+.txt                    1,036 files ( 1.12%)
+.sh                     1,034 files ( 1.12%)
+.json                     998 files ( 1.08%)
+.py                       346 files ( 0.38%)
+.rs                       338 files ( 0.37%)
+.dtso                     255 files ( 0.28%)
+.j2                       143 files ( 0.16%)
+.tc                       137 files ( 0.15%)
+.config                   101 files ( 0.11%)
+.pkt                       97 files ( 0.11%)
+.svg                       82 files ( 0.09%)
+.cocci                     75 files ( 0.08%)
+
+--------------------------------------------------------------------------------
+FILES WITH MOST LINES (Top 10)
+--------------------------------------------------------------------------------
+ 1.    222,948 LOC - drivers\gpu\drm\amd\include\asic_reg\dcn\dcn_3_2_0_sh_mask.h
+ 2.    154,426 LOC - drivers\gpu\drm\amd\include\asic_reg\nbio\nbio_7_7_0_sh_mask.h
+ 3.    152,483 LOC - drivers\gpu\drm\amd\include\asic_reg\nbio\nbio_7_2_0_sh_mask.h
+ 4.    145,870 LOC - drivers\gpu\drm\amd\include\asic_reg\dcn\dcn_4_1_0_sh_mask.h
+ 5.    136,141 LOC - drivers\gpu\drm\amd\include\asic_reg\dpcs\dpcs_4_2_3_sh_mask.h
+ 6.    133,888 LOC - drivers\gpu\drm\amd\include\asic_reg\nbio\nbio_6_1_sh_mask.h
+ 7.    120,339 LOC - drivers\gpu\drm\amd\include\asic_reg\nbio\nbio_2_3_sh_mask.h
+ 8.    118,975 LOC - drivers\gpu\drm\amd\include\asic_reg\nbio\nbio_7_0_sh_mask.h
+ 9.    103,633 LOC - drivers\gpu\drm\amd\include\asic_reg\dpcs\dpcs_4_2_2_sh_mask.h
+10.    103,385 LOC - drivers\gpu\drm\amd\include\asic_reg\dpcs\dpcs_4_2_0_sh_mask.h
+
+================================================================================
+END OF REPORT
+================================================================================

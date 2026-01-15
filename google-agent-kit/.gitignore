@@ -148,7 +148,7 @@ activemq-data/
 *.sage.py
 
 # Environments
-.env
+**/.env
 .envrc
 .venv
 env/
@@ -215,3 +215,8 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
+# Cloned repositories
+linux_kernel/
+linux_repo/
+cloned_repos/
+google-agent-kit\linux_repo

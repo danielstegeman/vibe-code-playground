@@ -1,0 +1,50 @@
+{
+  "eval_set_result_id": "code_analysis_system_testset_1768323041.1169612",
+  "eval_set_result_name": "code_analysis_system_testset_1768323041.1169612",
+  "eval_set_id": "testset",
+  "eval_case_results": [
+    {
+      "eval_set_file": "testset",
+      "eval_set_id": "testset",
+      "eval_id": "memory",
+      "final_eval_status": 3,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "tool_trajectory_avg_score",
+          "threshold": 1.0,
+          "judge_model_options": null,
+          "criterion": null,
+          "score": null,
+          "eval_status": 3,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "response_match_score",
+          "threshold": 0.7,
+          "judge_model_options": null,
+          "criterion": null,
+          "score": null,
+          "eval_status": 3,
+          "details": {
+            "rubric_scores": null
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [],
+      "session_id": "___eval___session___3c10502b-6ebb-4300-945a-9d6e87904c27",
+      "session_details": {
+        "id": "___eval___session___3c10502b-6ebb-4300-945a-9d6e87904c27",
+        "app_name": "code_analysis_system",
+        "user_id": "user",
+        "state": {},
+        "events": [],
+        "last_update_time": 1768323041.024072
+      },
+      "user_id": "user"
+    }
+  ],
+  "creation_timestamp": 1768323041.1169612
+}
