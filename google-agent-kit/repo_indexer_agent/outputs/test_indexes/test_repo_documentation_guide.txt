@@ -1,0 +1,76 @@
+================================================================================
+DOCUMENTATION SUBDOMAIN INDEX - AGENT NAVIGATION GUIDE
+================================================================================
+
+CORE SUBSYSTEMS
+────────────────────────────────────────────────────────────────────────────────
+[kernel] Process Management & Scheduling
+  Docs: Documentation/scheduler/, Documentation/admin-guide/kernel-parameters.txt
+  Code: kernel/sched/, include/linux/sched/
+
+[mm] Memory Management
+  Docs: Documentation/mm/, Documentation/admin-guide/mm/
+  Code: mm/, include/linux/mm*.h
+
+[locking] Synchronization & Locking
+  Docs: Documentation/locking/
+  Code: kernel/locking/, include/linux/spinlock.h, include/linux/mutex.h
+
+
+FILESYSTEMS
+────────────────────────────────────────────────────────────────────────────────
+[fs] Virtual Filesystem Layer
+  Docs: Documentation/filesystems/vfs.rst
+  Code: fs/*.c, include/linux/fs.h
+
+[ext4] EXT4 Filesystem
+  Docs: Documentation/filesystems/ext4/
+  Code: fs/ext4/
+
+[btrfs] Btrfs Filesystem
+  Docs: Documentation/filesystems/btrfs.rst
+  Code: fs/btrfs/
+
+
+NETWORKING
+────────────────────────────────────────────────────────────────────────────────
+[networking] Network Stack
+  Docs: Documentation/networking/
+  Code: net/, drivers/net/, include/net/
+
+[ipv4] IPv4 Protocol Implementation
+  Docs: Documentation/networking/ip-sysctl.rst
+  Code: net/ipv4/
+
+[wireless] Wireless Subsystem
+  Docs: Documentation/networking/mac80211.rst
+  Code: net/wireless/, drivers/net/wireless/
+
+
+DEVICE DRIVERS
+────────────────────────────────────────────────────────────────────────────────
+[gpu] Graphics Processing Units
+  Docs: Documentation/gpu/
+  Code: drivers/gpu/drm/
+
+[usb] USB Subsystem
+  Docs: Documentation/driver-api/usb/
+  Code: drivers/usb/, include/linux/usb/
+
+[block] Block Layer
+  Docs: Documentation/block/
+  Code: block/, drivers/block/
+
+
+ARCHITECTURE-SPECIFIC
+────────────────────────────────────────────────────────────────────────────────
+[x86] x86 Architecture
+  Docs: Documentation/arch/x86/, Documentation/x86/
+  Code: arch/x86/
+
+[arm64] ARM64 Architecture
+  Docs: Documentation/arch/arm64/, Documentation/arm64/
+  Code: arch/arm64/
+
+
+================================================================================

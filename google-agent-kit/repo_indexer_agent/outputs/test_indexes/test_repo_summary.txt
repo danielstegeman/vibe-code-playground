@@ -1,0 +1,42 @@
+================================================================================
+REPOSITORY INDEX REPORT
+================================================================================
+Repository: repo_indexer_agent_test
+Indexed at: 2026-01-12T22:00:44.191222
+
+--------------------------------------------------------------------------------
+SUMMARY STATISTICS
+--------------------------------------------------------------------------------
+Total Files: 25
+Total Directories: 10
+Total Lines of Code: 2,012
+Maximum Depth: 3
+
+--------------------------------------------------------------------------------
+FILE TYPE DISTRIBUTION
+--------------------------------------------------------------------------------
+.py                        12 files (48.00%)
+(no extension)              4 files (16.00%)
+.md                         3 files (12.00%)
+.txt                        3 files (12.00%)
+.ini                        1 files ( 4.00%)
+.db                         1 files ( 4.00%)
+.tag                        1 files ( 4.00%)
+
+--------------------------------------------------------------------------------
+FILES WITH MOST LINES (Top 10)
+--------------------------------------------------------------------------------
+ 1.        361 LOC - tools\output_formatter.py
+ 2.        298 LOC - tests\test_output_formatter.py
+ 3.        298 LOC - tests\test_repo_scanner.py
+ 4.        227 LOC - tools\repo_scanner.py
+ 5.         99 LOC - tools\data_models.py
+ 6.         96 LOC - README.md
+ 7.         76 LOC - outputs\test_indexes\test_repo_documentation_guide.txt
+ 8.         73 LOC - tests\README.md
+ 9.         72 LOC - tools\index_saver.py
+10.         70 LOC - .adk\session.db
+
+================================================================================
+END OF REPORT
+================================================================================

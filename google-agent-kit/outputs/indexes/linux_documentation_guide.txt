@@ -1,0 +1,90 @@
+================================================================================
+DOCUMENTATION SUBDOMAIN INDEX - AGENT NAVIGATION GUIDE
+================================================================================
+
+CORE SUBSYSTEMS
+────────────────────────────────────────────────────────────────────────────────
+[kernel] Process Management & Scheduling
+  Docs: Documentation/scheduler/, Documentation/admin-guide/kernel-parameters.txt
+  Code: kernel/sched/, include/linux/sched/
+  Lines: ~65,958 LOC
+
+[mm] Memory Management
+  Docs: Documentation/mm/, Documentation/admin-guide/mm/
+  Code: mm/, include/linux/mm*.h
+  Lines: ~247,695 LOC
+
+[locking] Synchronization & Locking
+  Docs: Documentation/locking/
+  Code: kernel/locking/, include/linux/spinlock.h, include/linux/mutex.h
+  Lines: ~20,633 LOC
+
+
+FILESYSTEMS
+────────────────────────────────────────────────────────────────────────────────
+[fs] Virtual Filesystem Layer
+  Docs: Documentation/filesystems/vfs.rst
+  Code: fs/*.c, include/linux/fs.h
+  Lines: ~1,792,306 LOC
+
+[ext4] EXT4 Filesystem
+  Docs: Documentation/filesystems/ext4/
+  Code: fs/ext4/
+  Lines: ~66,526 LOC
+
+[btrfs] Btrfs Filesystem
+  Docs: Documentation/filesystems/btrfs.rst
+  Code: fs/btrfs/
+  Lines: ~173,068 LOC
+
+
+NETWORKING
+────────────────────────────────────────────────────────────────────────────────
+[networking] Network Stack
+  Docs: Documentation/networking/
+  Code: net/, drivers/net/, include/net/
+  Lines: ~23,262,841 LOC
+
+[ipv4] IPv4 Protocol Implementation
+  Docs: Documentation/networking/ip-sysctl.rst
+  Code: net/ipv4/
+  Lines: ~124,453 LOC
+
+[wireless] Wireless Subsystem
+  Docs: Documentation/networking/mac80211.rst
+  Code: net/wireless/, drivers/net/wireless/
+  Lines: ~6,471,722 LOC
+
+
+DEVICE DRIVERS
+────────────────────────────────────────────────────────────────────────────────
+[gpu] Graphics Processing Units
+  Docs: Documentation/gpu/
+  Code: drivers/gpu/drm/
+  Lines: ~34,004,968 LOC
+
+[usb] USB Subsystem
+  Docs: Documentation/driver-api/usb/
+  Code: drivers/usb/, include/linux/usb/
+  Lines: ~1,381,966 LOC
+
+[block] Block Layer
+  Docs: Documentation/block/
+  Code: block/, drivers/block/
+  Lines: ~225,148 LOC
+
+
+ARCHITECTURE-SPECIFIC
+────────────────────────────────────────────────────────────────────────────────
+[x86] x86 Architecture
+  Docs: Documentation/arch/x86/, Documentation/x86/
+  Code: arch/x86/
+  Lines: ~1,278,251 LOC
+
+[arm64] ARM64 Architecture
+  Docs: Documentation/arch/arm64/, Documentation/arm64/
+  Code: arch/arm64/
+  Lines: ~4,717,005 LOC
+
+
+================================================================================
