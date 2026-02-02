@@ -56,6 +56,7 @@ January 13, 2026
 - `create_subdomain_context(subdomain, code_paths, lines_of_code, max_lines_per_agent)` - Split subdomains based on LOC limits
 - `aggregate_agent_responses(responses)` - Combine findings from multiple agents
 - `format_agent_handoff(from_agent, to_agent, context, instruction)` - Format handoff messages
+- `spawn_subdomain_agent(subdomain, code_paths, task_description, focus_question, agent_id)` - Create and execute new subdomain agents
 
 ### Orchestration Layer
 

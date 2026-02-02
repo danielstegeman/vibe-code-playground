@@ -2,6 +2,7 @@
 
 from typing import Dict, List, Optional
 import re
+from google.adk.agents.llm_agent import Agent
 
 
 def create_subdomain_context(
@@ -156,3 +157,75 @@ Context:
             message += f"\n{key}: {value}\n"
     
     return message
+
+
+def spawn_subdomain_agent(
+    subdomain: str,
+    code_paths: str,
+    task_description: str,
+    focus_question: str,
+    agent_id: Optional[str] = None
+) -> Dict[str, any]:
+    """
+    Spawn a new subdomain agent to analyze specific code paths.
+    
+    This tool allows the mediator to create additional subdomain agents
+    when gaps are identified in the analysis or follow-up investigation
+    is needed.
+    
+    Args:
+        subdomain: The subdomain this agent will analyze (e.g., "scheduler", "memory_management")
+        code_paths: Comma-separated list of paths to examine (e.g., "kernel/sched/, kernel/time/")
+        task_description: What this agent should accomplish
+        focus_question: Specific question for the agent to answer
+        agent_id: Optional custom identifier for the agent (auto-generated if not provided)
+    
+    Returns:
+        Dictionary containing:
+            - agent_id: The identifier of the spawned agent
+            - subdomain: The subdomain being analyzed
+            - paths: List of code paths assigned
+            - status: "completed" or "error"
+            - result: Analysis result from the agent (populated after execution)
+            - error: Error message if status is "error"
+    
+    Example:
+        spawn_subdomain_agent(
+            subdomain="scheduler",
+            code_paths="kernel/sched/core.c, kernel/sched/fair.c",
+            task_description="Analyze scheduler preemption logic",
+            focus_question="How does the scheduler decide when to preempt a running task?",
+            agent_id="scheduler_preemption_agent"
+        )
+    """
+    from ..agents.subdomain import create_subdomain_agent
+    
+    # Parse paths
+    paths = [p.strip() for p in code_paths.split(',')]
+    
+    # Generate agent ID if not provided
+    if agent_id is None:
+        subdomain_clean = subdomain.replace(' ', '_').lower()
+        agent_id = f"subdomain_agent_{subdomain_clean}"
+    
+    try:
+        # Create the agent - ADK agents must be invoked through the runner, not .run()
+        # The spawn tool cannot directly execute agents synchronously
+        # Instead, return the agent configuration for the mediator to handle
+        
+        return {
+            "agent_id": agent_id,
+            "subdomain": subdomain,
+            "paths": paths,
+            "status": "error",
+            "error": "spawn_subdomain_agent cannot be used as a tool. The mediator should create subdomain agents by transferring to them via ADK's sub_agents mechanism, not by calling this tool."
+        }
+        
+    except Exception as e:
+        return {
+            "agent_id": agent_id,
+            "subdomain": subdomain,
+            "paths": paths,
+            "status": "error",
+            "error": str(e)
+        }

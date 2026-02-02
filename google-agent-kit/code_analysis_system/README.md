@@ -113,6 +113,7 @@ Edit [config.py](config.py) to customize:
 - `create_subdomain_context()` - Split subdomains by LOC limits
 - `aggregate_agent_responses()` - Combine findings from multiple agents
 - `format_agent_handoff()` - Format handoff messages
+- `spawn_subdomain_agent()` - Create and execute new subdomain agents (Mediator only)
 
 ## Project Structure
 

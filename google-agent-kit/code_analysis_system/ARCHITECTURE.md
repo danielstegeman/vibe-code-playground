@@ -233,6 +233,7 @@ Communication Paths:
 │  │ • create_subdomain_context      (Director)     │        │
 │  │ • format_agent_handoff          (Director)     │        │
 │  │ • aggregate_agent_responses     (Mediator)     │        │
+│  │ • spawn_subdomain_agent         (Mediator)     │        │
 │  └────────────────────────────────────────────────┘        │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
