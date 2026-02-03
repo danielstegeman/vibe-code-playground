@@ -25,3 +25,8 @@ class Config:
     # Set to True to use single consolidated agent
     # Set to False to use multi-agent system (default)
     USE_SINGLE_AGENT = False
+    
+    # Consistency critic agents toggle
+    # Set to True to enable detailed consistency grading for each agent
+    # Set to False to skip critic analysis (faster performance)
+    ENABLE_CRITICS = True

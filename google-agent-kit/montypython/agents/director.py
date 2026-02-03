@@ -8,6 +8,33 @@ from ..callbacks import rate_limit_callback
 from ..tools.scene_tools import get_scene_flow_distribution, initiate_dialogue_exchange
 
 
+def _get_critic_agents():
+    """Get all critic agents for consistency evaluation"""
+    if not Config.ENABLE_CRITICS:
+        return []
+    
+    from .critics.critic_john import critic_john_agent
+    from .critics.critic_eric import critic_eric_agent
+    from .critics.critic_michael import critic_michael_agent
+    from .critics.critic_graham import critic_graham_agent
+    from .critics.critic_terry_j import critic_terry_j_agent
+    from .critics.critic_terry_g import critic_terry_g_agent
+    from .critics.critic_director import critic_director_agent
+    from .critics.critic_aggregator import critic_aggregator_agent
+    
+    # Return all critics followed by aggregator
+    return [
+        critic_john_agent,
+        critic_eric_agent,
+        critic_michael_agent,
+        critic_graham_agent,
+        critic_terry_j_agent,
+        critic_terry_g_agent,
+        critic_director_agent,
+        critic_aggregator_agent
+    ]
+
+
 # Scene setup agent - runs once at the beginning
 scene_setup_agent = Agent(
     model=LiteLlm(
@@ -298,7 +325,7 @@ Be encouraging but honest. Give specific, actionable feedback with examples.
 )
 
 
-# The root agent combines setup + loop + compilation + critique
+# The root agent combines setup + loop + compilation + critique + critics
 root_agent = SequentialAgent(
     name='director_agent',
     description='Monty Python improv director using loop-based performance',
@@ -307,7 +334,7 @@ root_agent = SequentialAgent(
         _get_performance_loop(),
         script_compiler_agent,  # Compile script after performance ends
         critic_agent  # Review the performance
-    ]
+    ] + _get_critic_agents()  # Add consistency critics if enabled
 )
 
 
@@ -409,7 +436,7 @@ def _get_single_agent_root():
             _create_scene_setup_agent(),
             single_performer_agent,  # Single agent performs entire scene
             _create_critic_agent()  # Review the performance
-        ]
+        ] + _get_critic_agents()  # Add consistency critics if enabled
     )
 
 

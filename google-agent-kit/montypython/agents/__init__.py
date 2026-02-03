@@ -8,6 +8,14 @@ _terry_j_agent = None
 _terry_g_agent = None
 _eric_agent = None
 _michael_agent = None
+_critic_john_agent = None
+_critic_eric_agent = None
+_critic_michael_agent = None
+_critic_graham_agent = None
+_critic_terry_j_agent = None
+_critic_terry_g_agent = None
+_critic_director_agent = None
+_critic_aggregator_agent = None
 
 
 def get_director_agent():
@@ -79,6 +87,78 @@ def get_single_agent_director():
     return _get_single()
 
 
+def get_critic_john_agent():
+    """Lazy load John Cleese critic agent"""
+    global _critic_john_agent
+    if _critic_john_agent is None:
+        from .critics.critic_john import critic_john_agent
+        _critic_john_agent = critic_john_agent
+    return _critic_john_agent
+
+
+def get_critic_eric_agent():
+    """Lazy load Eric Idle critic agent"""
+    global _critic_eric_agent
+    if _critic_eric_agent is None:
+        from .critics.critic_eric import critic_eric_agent
+        _critic_eric_agent = critic_eric_agent
+    return _critic_eric_agent
+
+
+def get_critic_michael_agent():
+    """Lazy load Michael Palin critic agent"""
+    global _critic_michael_agent
+    if _critic_michael_agent is None:
+        from .critics.critic_michael import critic_michael_agent
+        _critic_michael_agent = critic_michael_agent
+    return _critic_michael_agent
+
+
+def get_critic_graham_agent():
+    """Lazy load Graham Chapman critic agent"""
+    global _critic_graham_agent
+    if _critic_graham_agent is None:
+        from .critics.critic_graham import critic_graham_agent
+        _critic_graham_agent = critic_graham_agent
+    return _critic_graham_agent
+
+
+def get_critic_terry_j_agent():
+    """Lazy load Terry Jones critic agent"""
+    global _critic_terry_j_agent
+    if _critic_terry_j_agent is None:
+        from .critics.critic_terry_j import critic_terry_j_agent
+        _critic_terry_j_agent = critic_terry_j_agent
+    return _critic_terry_j_agent
+
+
+def get_critic_terry_g_agent():
+    """Lazy load Terry Gilliam critic agent"""
+    global _critic_terry_g_agent
+    if _critic_terry_g_agent is None:
+        from .critics.critic_terry_g import critic_terry_g_agent
+        _critic_terry_g_agent = critic_terry_g_agent
+    return _critic_terry_g_agent
+
+
+def get_critic_director_agent():
+    """Lazy load director critic agent"""
+    global _critic_director_agent
+    if _critic_director_agent is None:
+        from .critics.critic_director import critic_director_agent
+        _critic_director_agent = critic_director_agent
+    return _critic_director_agent
+
+
+def get_critic_aggregator_agent():
+    """Lazy load critic aggregator agent"""
+    global _critic_aggregator_agent
+    if _critic_aggregator_agent is None:
+        from .critics.critic_aggregator import critic_aggregator_agent
+        _critic_aggregator_agent = critic_aggregator_agent
+    return _critic_aggregator_agent
+
+
 __all__ = [
     'get_director_agent',
     'get_john_agent',
@@ -88,4 +168,12 @@ __all__ = [
     'get_eric_agent',
     'get_michael_agent',
     'get_single_agent_director',
+    'get_critic_john_agent',
+    'get_critic_eric_agent',
+    'get_critic_michael_agent',
+    'get_critic_graham_agent',
+    'get_critic_terry_j_agent',
+    'get_critic_terry_g_agent',
+    'get_critic_director_agent',
+    'get_critic_aggregator_agent',
 ]

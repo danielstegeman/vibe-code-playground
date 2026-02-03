@@ -13,7 +13,7 @@ logger.setLevel(logging.DEBUG)
 # Based on 50,000 input TPM org limit with safety buffer
 RATE_LIMIT_SECS = 60  # Time window in seconds
 RPM_QUOTA = 20  # Requests per minute quota
-TPM_QUOTA = 40000  # Tokens per minute quota (with 10k buffer from 50k org limit)
+TPM_QUOTA = 30000  # Tokens per minute quota (with 10k buffer from 50k org limit)
 
 
 def _estimate_tokens(llm_request: LlmRequest) -> int:
