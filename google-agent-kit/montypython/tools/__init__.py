@@ -1,5 +1,5 @@
 """Tools for the Monty Python improv system"""
 
-from .scene_tools import select_random_performer, increment_turn_count
+from .scene_tools import get_scene_flow_distribution, increment_turn_count, initiate_dialogue_exchange
 
-__all__ = ['select_random_performer', 'increment_turn_count']
+__all__ = ['get_scene_flow_distribution', 'increment_turn_count', 'initiate_dialogue_exchange']

@@ -1,0 +1,69 @@
+{
+  "eval_set_id": "Montypython",
+  "name": "Montypython",
+  "eval_cases": [
+    {
+      "eval_id": "Buying Silence",
+      "conversation": [
+        {
+          "invocation_id": "e-d8a089e0-2c6e-472e-9863-77191583e276",
+          "user_content": {
+            "parts": [
+              {
+                "text": "A man goes to a shop to buy silence, only to be upsold increasingly loud varieties of quiet."
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "# CRITIC'S REVIEW\n\n## What Worked:\n\n**1. The Core Absurdist Premise is Rock Solid**\nJohn's opening tirade—\"silence isn't something one simply buys like a tin of beans\"—perfectly captures that Pythonesque pedantry where bureaucratic nonsense becomes indistinguishable from sense. The escalation from \"premium silence\" to \"acoustic dampening of consciousness\" shows genuine commitment to the illogic.\n\n**2. Eric's Ferret Tangents Are Genuinely Pythonesque**\n\"My uncle's ferret understood this completely... We think it was because it was dead, but the point stands!\" This is *exactly* the kind of non-sequitur that works in Python—the character doesn't defend the logic, he just barrels past it. And repeating it later (\"Of course, it was dead, so that might have helped with the credibility\") shows callback discipline.\n\n**3. The Bureaucratic Interruptions Build Texture**\nGraham filing paperwork complaints and Terry G citing legal sections creates that brilliant Python moment where absurdity operates under a veneer of official procedure. \"Section 47, subsection 'Aggressive Marketing Tactics'\" is *the* joke done right.\n\n## What Could Be Improved:\n\n**1. Michael Never Truly Commits to the Logic—He Just Complains**\nThis is the biggest miss. A real Python scene would have Michael gradually *accepting* the absurd logic and becoming complicit. Instead of his final \"I JUST WANT QUIET!\" being a break, he should escalate INTO the system. Pythonesque example:\n\n**Current:** Michael stammers and protests throughout.  \n**Should be:** By line 40, Michael should be arguing BACK with equally absurd logic. \"Well if silent noise exists, couldn't I purchase the ANTI-SILENT NOISE™ to cancel it out?\" He becomes a salesman for his own victimhood. This is why the ending lands better—he's not defeated, he's been *converted*.\n\n**2. The Authority Figures Never Fully Escalate Their Rants**\nJohn gets angry twice but never achieves that magnificent Python fury where logic spirals into complete incoherence. Compare to this potential:\n\n**Current:** \"There is COMPETITIVE SILENCE! There is ASPIRATIONAL QUIET!\"  \n**Could be:** John should launch into an increasingly unhinged explanation of why the PARADOX SILENCE™ is the ONLY morally defensible option, citing fake regulations, attacking Michael's character, bringing in completely unrelated grievances (\"You probably don't even deserve silence, Mr. Perkins—I bet you're the type who irons on a Tuesday!\"). Let him *commit to rage* for a solid 30 seconds without interruption.\n\n**3. Too Many Products Introduced Without Escalating Arguments**\nThe scene introduces MEGA SILENCE™, PARADOX SILENCE™, SILENT NOISE™, etc., but doesn't *argue for them*. In Python, each new absurd product should prompt a 10-15 second debate where characters defend its superiority using broken logic:\n\n**Missing beat example:**\nTerry J proposes SILENT NOISE™. John should immediately respond: \"No, no, no, silent noise is pedestrian. We need NOISY SILENCE—silence so loud it achieves a Zen state through acoustic assault!\" Graham adds: \"I've already filed the patent under Section 92-B: 'Contradictory Sensory Products.'\" This turns a one-liner into a 20-second escalation.\n\n**4. Cut the Scene 20 Seconds Too Early**\nThe unison line \"WE DON'T HAVE A BASIC ONE!\" is the punchline, but Python would push further. Michael sinking to the floor should *begin* a new argument where the shopkeepers try to upsell him on the *experience* of despair:\n\n**Could add:** John notices Michael on floor: \"Ah, excellent! You're in the demonstration posture! This is actually perfect—you're in SURRENDER POSITION, which qualifies you for our DEFEATED CUSTOMER PREMIUM PACKAGE™! No additional charge, just the minor matter of your dignity and £12,000 annual renewal fee...\"\n\n## Overall Assessment:\n\nThis script has the *architecture* of Monty Python—the absurdist core, the bureaucratic scaffolding, the commitment to illogic—but it plays it slightly safe by making Michael the audience surrogate who correctly identifies the insanity rather than a participant who gets *caught up* in it. The best Python sketches involve characters defending genuinely terrible ideas with unshakeable confidence; Michael should gradually become convinced he's the problem, not the shopkeepers.\n\n**Rating: 7/10 Flying Circuses**\n\nThis is solidly funny and structurally sound, but it stops just short of that *manic energy* where logic completely collapses and everyone's speaking the same language of beautiful nonsense.\n\n## Encouragement:\n\nYou've nailed the bones of a genuinely Pythonesque scene—now push your characters to be *more committed, more escalatory, and more willing to argue nonsense with absolute seriousness*. The script knows how to be absurd; make it willing to stay there longer and drag your characters deeper into the illogic with you."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1770108554.138457
+        }
+      ],
+      "session_input": {
+        "app_name": "montypython",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1770109057.7916825
+    },
+    {
+      "eval_id": "Sermon hats",
+      "conversation": [
+        {
+          "invocation_id": "e-0ec2bd00-c606-4a77-9896-84de52af6da5",
+          "user_content": {
+            "parts": [
+              {
+                "text": "A church sermon slowly turns into a product demonstration for increasingly specific types of hats"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "# CRITIC'S REVIEW\n\n## **What Worked:**\n\n1. **John's escalating outrage is genuinely Pythonesque** — His progression from objecting to the hats (\"maintains focus on spiritual matters\") to full apoplectic breakdown (\"SYSTEMATICALLY UNDERMINED\") with specific bureaucratic grievances (\"four separate Anglican protocols\") commits completely to the absurd authority-figure rage. The line about the Council of Nicaea is perfect: a weighty historical reference deployed in service of defending hat protocol.\n\n2. **The Derek Hat bit has proper Python-grade specificity** — Terry J's throwaway \"it's only for Dereks\" gets immediately escalated by Eric (seventeen Derek-specific hats, Derek hat consultant) and then bureaucratized by Terry G (Section 52, honorary Derek status, forms in pockets). This is how Python worked: take the dumbest premise and add LAYERS of institutional logic.\n\n3. **Graham's unflappable professionalism** — He never breaks character or defends himself. He simply produces the next hat with calm confidence, treating soup-eating-in-hurricanes as legitimate ecclesiastical engineering. This straight-man commitment is essential.\n\n## **What Could Be Improved:**\n\n1. **Michael keeps INTERRUPTING the arguments instead of ESCALATING them** — He stammers about returning to the sermon three times but never actually *joins the madness*. Python characters don't timidly object—they either COMMIT or they become part of the absurdity. Instead of \"I—I really think we should return to the sermon,\" Michael should *weaponize* his nervousness: \"Actually, according to the *supplementary* vestry regulations—which I've apparently now memorized—there's a specific hat for people experiencing liturgical anxiety, and it has *cooling vents*. I've been wearing it mentally for several minutes now.\" Give him agency in the chaos.\n\n2. **The scene peaks at John's breakdown but doesn't push PAST that** — Python sketches often have a turning point where the established order completely inverts. After John's \"COMPLETE AND UTTER MADNESS\" speech, he should either: (a) get pulled into examining a hat himself and have an epiphany, (b) realize he's been arguing FOR the wrong thing, or (c) try to reassert authority and get drowned out by overlapping hat discourse. Right now he gets the best rant and then... exits frustration? He should physically *lose control* — maybe grab a hat, maybe demand to be the new hat authority, maybe declare the hats heretical. The scene ends with his complaint, but Python would have him become complicit or completely defeated.\n\n3. **The auction/display moment deflates instead of escalates** — Terry J pivots to auctioneer energy, but this is exactly where the sketch could go FURTHER. Instead of a low-stakes \"Do I hear two shillings?\" moment, this should become a *genuine institutional crisis*. What if Graham announces the hats must be catalogued for the Diocese? What if John tries to CONFISCATE them as evidence? What if the congregation starts FIGHTING over hat ownership? The moment you introduce competition/scarcity, the absurdism compounds. Right now it's described as fun; it should become *urgent and ridiculous*.\n\n4. **Eric's contributions are charming but don't escalate the LOGIC** — His ferret story and Prodigal Son hat history are funny, but they're essentially *confirmations* (\"yes, hats are everywhere\"). Python would have him *complicate* the argument. Example: \"Actually, the soup hat violates Section 3 of the Ecclesiastical Millinery Code because it contains a *liquid*, and liquids aren't permitted in hats above the rank of Reverend. Graham's wearing it, which means he's either committed heresy or he's been secretly promoted to Bishop without the Bishop's knowledge, which is technically impossible unless the Bishop hat *grants* Bishop status retroactively...\" Now he's creating *contradictory bureaucratic logic* that makes the situation worse.\n\n5. **The \"cork hat floats\" bit undersells the physics** — Graham says \"it floats. In the event of flooding.\" But why does he stop there?! Python would have him *worry through the implications*: \"Though I suppose if the entire congregation is drowning, and I'm floating, I'm technically abandoning my flock, which creates a moral contradiction with the vicar's oath. Unless—and here's where it gets interesting—the oath specifically covers 'dry drowning' scenarios, in which case my floating status might actually be *mandated* by ecclesiastical law...\" The logic should fork and become increasingly tangled.\n\n## **Overall Assessment:**\n\nThis is **genuinely funny sketch-comedy with strong Python DNA**, but it settles for being \"Python-flavored\" rather than committing to Python's *escalating institutional chaos*. The foundation is excellent — the absurd premise, the distinct voices, John's magnificent outrage — but the scene needs characters who keep *pushing the logic forward* rather than just reacting to new hats. Python sketches don't stop when someone objects; they accelerate past objections into new contradictions.\n\n**Rating:** 7/10 Flying Circuses\n\n(Strong setup and character work, but needs one more pass to turn \"fun hat bit\" into \"systematic dismantling of ecclesiastical authority through headwear bureaucracy.\")\n\n## **Encouragement:**\n\nYou've built a genuinely solid premise with real character voices and escalating absurdity — now go back and make sure every character is *arguing forward* rather than commenting, and let John's breakdown be a midpoint, not an ending."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1770109111.902899
+        }
+      ],
+      "session_input": {
+        "app_name": "montypython",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1770109182.107452
+    }
+  ],
+  "creation_timestamp": 1770109044.3936458
+}

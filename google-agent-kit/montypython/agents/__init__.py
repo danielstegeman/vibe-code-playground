@@ -73,6 +73,12 @@ def get_michael_agent():
     return _michael_agent
 
 
+def get_single_agent_director():
+    """Lazy load single-agent director"""
+    from .director import get_single_agent_director as _get_single
+    return _get_single()
+
+
 __all__ = [
     'get_director_agent',
     'get_john_agent',
@@ -81,4 +87,5 @@ __all__ = [
     'get_terry_g_agent',
     'get_eric_agent',
     'get_michael_agent',
+    'get_single_agent_director',
 ]

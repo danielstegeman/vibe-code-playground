@@ -1,21 +1,31 @@
 """Main entry point for Monty Python Improv System"""
 
 from google.adk.runners import InMemoryRunner
-from agents.director import director_agent
+from agents.director import director_agent, get_single_agent_director
+from config import Config
 
 
 def main():
     """Run the Monty Python improv system"""
     
+    # Select agent mode
+    if Config.USE_SINGLE_AGENT:
+        agent = get_single_agent_director()
+        mode = "SINGLE-AGENT MODE"
+    else:
+        agent = director_agent
+        mode = "MULTI-AGENT MODE"
+    
     print("=" * 60)
     print("MONTY PYTHON IMPROV THEATRE")
     print("=" * 60)
+    print(f"\n[{mode}]")
     print("\nWelcome to the Monty Python Improv System!")
     print("Featuring: John Cleese, Graham Chapman, Terry Jones,")
     print("          Terry Gilliam, Eric Idle, and Michael Palin\n")
     
     runner = InMemoryRunner(
-        agent=director_agent,
+        agent=agent,
         app_name="monty_python_improv"
     )
     
