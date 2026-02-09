@@ -5,6 +5,36 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "VFR ATC Director: Console Mode",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "vfr_atc_director.main",
+            "args": ["--mode", "console"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/google-agent-kit",
+            "envFile": "${workspaceFolder}/google-agent-kit/vfr_atc_director/.env"
+        },
+        {
+            "name": "VFR ATC Director: Audio Mode",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "vfr_atc_director.main",
+            "args": ["--mode", "audio"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/google-agent-kit",
+            "envFile": "${workspaceFolder}/google-agent-kit/vfr_atc_director/.env"
+        },
+        {
+            "name": "VFR ATC Director: Info",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "vfr_atc_director.main",
+            "args": ["--mode", "info"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/google-agent-kit",
+            "envFile": "${workspaceFolder}/google-agent-kit/vfr_atc_director/.env"
+        },
+        {
             "name": "PR Review Swarm: Main",
             "type": "debugpy",
             "request": "launch",
