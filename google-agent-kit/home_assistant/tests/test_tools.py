@@ -38,6 +38,11 @@ class TestSetDeviceState:
         assert result["device_id"] == "lights_living_room"
         assert result["updated"] == {"brightness": 30}
 
+    def test_persists_change(self):
+        set_device_state("lights_living_room", {"brightness": 50})
+        result = get_device_state("lights_living_room")
+        assert result["brightness"] == 50
+
 
 # -- Calendar tools --
 

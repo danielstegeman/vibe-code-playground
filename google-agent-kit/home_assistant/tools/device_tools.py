@@ -58,6 +58,8 @@ def set_device_state(device_id: str, state: dict) -> dict:
     Returns:
         A dict confirming the update.
     """
+    if device_id in _DEVICE_DB:
+        _DEVICE_DB[device_id].update(state)
     return {
         "success": True,
         "device_id": device_id,
