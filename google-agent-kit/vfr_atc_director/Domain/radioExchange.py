@@ -39,7 +39,7 @@ class ControllerResponse:
         return self
     
     def with_expected_readback(self, readback):
-        self.parts.append(f"EXPECTED READBACK: {readback}")
+        self.parts.append(f"EXPECTED READBACK: {readback}\n Note: Pilots must read back correctly. DO NOT RESPOND if readback is incorrect. If readback is incorrect, repeat original instruction.")
         return self
     
     def with_any(self, info):

@@ -13,13 +13,20 @@ def _get_specialist_agents():
     
     Returns:
         List of specialist agents (Ground, Clearance, Approach, etc.).
-        Currently empty - tower controller handles all operations directly.
     """
+    agents = []
+    
+    # Add phraseology critic if enabled
+    if Config.ENABLE_PHRASEOLOGY_CRITIC:
+        from .agents import get_phraseology_critic_agent
+        agents.append(get_phraseology_critic_agent())
+    
     # Future enhancement: Add specialist controllers for complex operations
     # - Ground controller for taxi operations
     # - Clearance delivery for IFR clearances
     # - Approach/Departure controller for terminal airspace
-    return []
+    
+    return agents
 
 
 def _get_atc_tools():
@@ -87,6 +94,22 @@ COMMUNICATION DISCIPLINE:
 - Confirm critical instructions
 - Use standard altimeter settings format
 - Provide wind in degrees and knots
+
+PHRASEOLOGY REVIEW PROCESS:
+Before transmitting ANY communication to a pilot, you MUST:
+1. Draft your complete response
+2. Transfer to the 'phraseology_critic' sub-agent with your draft
+3. Provide your draft in this format: "Please review: [your complete draft transmission]"
+4. The critic will return the corrected version
+5. Transmit the corrected version to the pilot
+
+Example workflow:
+- You draft: "PH-CWE, you're good to land on 24"
+- You transfer to phraseology_critic: "Please review: PH-CWE, you're good to land on 24"
+- Critic returns: "CWE, cleared to land runway 24, wind 240 at 8"
+- You transmit the corrected version to the pilot
+
+This ensures all communications meet ICAO/EASA standards for safety and clarity.
 
 Remember: Safety is paramount. Always provide clear, unambiguous instructions.
 """,

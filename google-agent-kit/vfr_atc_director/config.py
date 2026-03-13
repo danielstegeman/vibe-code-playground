@@ -30,6 +30,7 @@ class Config:
     # Director Settings
     ENABLE_SUB_AGENTS = True  # Enable delegation to specialist agents
     MAX_DELEGATION_DEPTH = 3  # Prevent infinite delegation loops
+    ENABLE_PHRASEOLOGY_CRITIC = True  # Enable phraseology review before transmission
     
     # Logging
     LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
